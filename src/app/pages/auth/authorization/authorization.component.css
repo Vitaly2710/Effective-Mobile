@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+:root {
+  --primary-color:#38A6FF;
+  --secondary-color:#115D8C;
+  --border-color:rgba(129, 129, 129, 0.5);
+  --footerBackground-color:linear-gradient(355.31deg, #38A6FF 50.1%, rgba(56, 166, 255, 0.19) 96.31%);
+  --white-color:#FFFFFF;
+  --headers-text-style:'Montserrat', Bold, sans-serif;
+  --coomon-text-style:'Montserrat', Regular, sans-serif;
+  --button-text-style:'Montserrat', Semiold, sans-serif;
+  --label-text-color:#818181;
+  --input-form-hover:#D99230
+}
+
+.wrapperForRegistration {
+  display: grid;
+  grid-template-columns: 37% 63%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 10px 5px 40px 12px rgba(0, 0, 0, 0.19);
+  border-radius: 2rem;
+  margin-top: 3%;
+}
+
+.wrapperForRegistrationForm {
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+.wrapperForYouAreBack {
+  border-right: 0.1rem solid var(--label-text-color);
+}
+
+.backgroundRegistration {
+  height: 21rem;
+  background-image: url("../../../../assets/BackgroundRegistration.svg");
+  background-position: top;
+}
+
+.youComeBack {
+  text-align: center;
+  margin-top: 14%;
+  font-family: var(--headers-text-style);
+  font-size: 3.2rem;
+}
+
+.comeIn {
+  max-width: 16.5rem;
+  margin: 1rem auto;
+  text-align: center;
+  font-family: var(--headers-text-style);
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2;
+}
+
+.comeIn a {
+  color: #38A6FF;
+  text-decoration: none;
+}
+
+.comeIn a:hover {
+  color: var(--secondary-color);
+}
+
+.toLogInInRegistration {
+  cursor: pointer;
+}
+
+.headingInRegistration {
+  font-family: var(--headers-text-style);
+  font-size: 4.8rem;
+  margin-top: 5rem;
+  text-align: center;
+  color: vAR(--primary-color);
+  margin-bottom: 8.8rem;
+}
+
+.wrapperForRegistrationForm {
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+.createAc {
+  margin-top: 30%;
+  text-align: center;
+  max-width: 25.8rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: var(--headers-text-style);
+  font-size: 4.8rem;
+}
+
+.formInRegPage {
+  margin-top: 23%;
+}
+
+.formInRegPage label {
+  color: var(--label-text-color);
+  font-family: var(--headers-text-style);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.formInRegPage input {
+  display: block;
+  margin-top: 6%;
+  border: none;
+  border-bottom: 1px solid rgba(129, 129, 129, 0.5);
+  margin-bottom: 6%;
+  width: 100%;
+  padding-bottom: 3%;
+}
+
+.formInRegPage input:focus {
+  outline: none !important;
+  border:0.2rem solid var(--input-form-hover);
+  border-radius: 0.3rem;
+}
+
+.toLogInInRegistration {
+  cursor: pointer;
+}
+
+.registrationButton {
+  width: 100%;
+  margin-top: 10%;
+  background-color:#38A6FF;
+  color: #FFFFFF;
+  padding: 3% 10% 3% 10%;
+  border: none;
+  border-radius: 2rem;
+  font-family: var(--button-text-style);
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.registrationButton:hover {
+  background-color:#115D8C;
+}
+
+.disable {
+  background-color: #818181;
+}
+
