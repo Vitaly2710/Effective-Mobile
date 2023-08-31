@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { font-size: 62.5%; }
+body { font-size: 1.8rem; }
+
+
+header {
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 160px 204px;
+  justify-content: space-between;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  background-color:#FFFFFF;
+  z-index: 1;
+  padding-left: 2%;
+  padding-right: 2%;
+  position: sticky;
+  top: 0;
+}
+
+.mainPageContainer {
+  max-width: 1512px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  height: 100vh;
+}
+
+.logoBlockInHeader {
+  display: flex;
+}
+
+.logoBlockInHeader img {
+  width: 56px;
+  height: 56px;
+}
+
+.trotterInHeader {
+  margin-left: 8px;
+  margin-top: 18px;
+  font-family:'Montserrat', Bold, sans-serif;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: #38A6FF;
+  cursor: pointer;
+}
+
+.logInButton {
+  max-width: 96px;
+  margin-top: 15px;
+  padding: 8px 25px 8px 26px;
+  background: #38A6FF;
+  border-radius: 30px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.logInButton:hover {
+  background-color: #115D8C ;
+}
+
+.mainBlock {
+  display: flex;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  height: 100%;
+}
+
+.mainBlockTrotteList {
+  width: 75%;
+  overflow: auto;
+}
+
+.mainBlockTrotteListWrapper {
+  border-bottom: 1px solid rgba(129, 129, 129, 0.5);
+}
+
+.mainBlockTrotteListTrotter {
+  border-bottom: 1px solid rgba(129, 129, 129, 0.5);
+}
+
+.mainBlockTrotteList h2 {
+  margin-top: 1.5%;
+  font-family: 'Montserrat', Bold, sans-serif;
+  font-size: 3rem;
+  line-height: 39px;
+  width: 62%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mainBlockTrotteListContainer {
+  width: 62%;
+  margin: 3% auto 0%;
+}
+
+
+.mainBlockTrotteListTrotter .container {
+  width: 62%;
+  margin: 1.5% auto 0%;
+
+}
+
+.mainBlockTrotteListTrotter .userInfo {
+  display: flex;
+  position: relative;
+}
+
+.mainBlockTrotteListTrotter .userInfo h3 {
+  font-family:'Montserrat', Bold, sans-serif;
+  font-size: 1.8rem;
+  line-height: 22px;
+}
+
+.mainBlockTrotteListTrotter .userInfo h4{
+  margin-left: 7%;
+  font-family: 'Montserrat', Regular, sans-serif;
+  font-size: 1.8rem;
+  line-height: 22px;
+  color: #818181;
+  font-weight: 400;
+}
+
+.mainBlockTrotteListTrotter .userInfo h4:last-child {
+  margin-left: 1.3%;
+}
+
+.mainBlock .styleForUndefined {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-family: 'Montserrat', Bold, sans-serif;
+  color: black;
+  text-align: center;
+}
+
+
+.photoInput {
+  display: flex;
+  align-items: center;
+}
+
+.photoInput img {
+  width: 8%;
+  border-radius: 50%;
+  display: block;
+}
+
+.photoInput input {
+  display: block;
+  margin-left: 2.3%;
+  border: none;
+  height: 3%;
+  font-family: 'Montserrat', Regular, sans-serif;
+  font-size: 1.8rem;
+  line-height: 22px;
+  width: 100%;
+}
+
+.buttonWhichAddNewTweetInList {
+  border-radius: 30px;
+  padding: 1% 3.7% 1% 3.7%;
+  background-color: #38A6FF;
+  color:#FFFFFF;
+  border: none;
+  margin-bottom: 2.2%;
+  width: 15%;
+  font-family: 'Montserrat', Semiold, sans-serif;
+  font-size: 1.6rem;
+  margin-left: 10%;
+  cursor: pointer;
+}
+
+.buttonWhichAddNewTweetInList:hover {
+  background-color: #115D8C;
+}
+
+
+.inclosureAndInput {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
+  width: 100%;
+}
+
+.inclosureAndInput .inclosure {
+  margin-left: 10%;
+  width: 25%;
+  margin-bottom: 3%;
+}
+
+.inclosureAndInput .inclosure img {
+  width: 12%;
+  margin-right: 6%;
+}
+
+.moreTrotter {
+  text-align: center;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  font-family: 'Montserrat', Regular, sans-serif;
+  font-size: 1.8rem;
+  color: #818181;
+  font-weight: 400;
+  position: relative;
+
+}
+
+.moreTrotter::after {
+  content: '';
+  background-image: url("../../../../assets/seeMore.svg");
+  position: absolute;
+  width: 4%;
+  height: 50%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateY(43%);
+  cursor: pointer;
+}
+
+footer {
+  background: linear-gradient(355.31deg, #38A6FF 50.1%, rgba(56, 166, 255, 0.19) 96.31%);
+  display: flex;
+  padding-left: 4%;
+  padding-top: 3%;
+  align-items: center;
+  padding-bottom: 5%;
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+}
+
+.logoInFooter {
+  display: flex;
+  align-items: center;
+}
+
+.logoInFooter img {
+  width: 31%;
+  height: 99%;
+}
+
+.logoInFooter h2 {
+  margin-left: 5% ;
+  color: #FFFFFF;
+  font-family: 'Montserrat', Bold, sans-serif;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.howAndWhen {
+  margin-left: 4%;
+}
+
+.howAndWhen p {
+  color: #FFFFFF;
+  font-family: 'Montserrat', Bold, sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.howAndWhen p:last-child {
+  font-family: 'Montserrat', Regular, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-top: 8%;
+}
+
+.mailInFooter {
+  margin-left: 2%;
+  color: #FFFFFF;
+  font-family: 'Montserrat', Regular, sans-serif;
+  font-size: 1.8rem;
+  font-weight: normal;
+}
