@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Posts} from "../../../store/interfaces";
 
 @Component({
   selector: 'app-main',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent {
+  @Input() posts: number | null = 0;
+  @Output() addNew = new EventEmitter();
 
+
+  console() {
+    console.log(this.posts)
+  }
 }
