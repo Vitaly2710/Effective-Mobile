@@ -2,35 +2,26 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {State} from "../../../store/reducers";
 import {Store} from "@ngrx/store";
 import {add} from "../../../store/actions";
-import {Observable} from "rxjs";
+import {Observable, take, takeWhile} from "rxjs";
 import {Posts} from "../../../store/interfaces";
 import {selectFeatureCount} from "../../../store/selectors";
 import {HttpClient} from "@angular/common/http";
+import {HttpService} from "../../../services";
 
 @Component({
   selector: 'app-main-container',
   template: `
 		<app-main
-      [posts]="stateStatus$ | async"
-      (addNew)="addSms()"
+      [posts]="allPost"
     >
 		</app-main>
 	`,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [HttpService]
 })
 export class MainComponentContainer {
-
-  stateStatus$:Observable<number>;
-
   allPost: Posts[] = [];
 
-  constructor(private store: Store <State>,) {
-    this.stateStatus$ = this.store.select(selectFeatureCount)
-
-  }
-
-  addSms() {
-    this.store.dispatch(add())
-    console.error('wwwww')
+  constructor(private store: Store <State>,private http: HttpService) {
+    this.http.getData().pipe(take(1)).subscribe((elems) => this.allPost = elems as Posts[] )
   }
 }

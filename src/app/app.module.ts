@@ -11,6 +11,7 @@ import {counterReducer} from "./store/reducers";
 import {MainComponentContainer} from "./pages/main/main/main.container";
 import {MainModule} from "./pages/main/main/main.module";
 import {HttpClientModule} from "@angular/common/http";
+import {CommonModule} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {HttpClientModule} from "@angular/common/http";
     ReactiveFormsModule,
     StoreModule.forRoot({count: counterReducer}),
     MainModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

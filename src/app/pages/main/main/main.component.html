@@ -33,7 +33,43 @@
           </div>
         </div>
         <div id="trotterList"></div>
+          <div *ngFor="let item of updatePosts">
+              <div class="container" id="{{item.id}}">
+                <div class="wrapperUserPhoto">
+                  <img src="../../../../assets/UserFoto.svg" alt="user photo">
+                </div>
+                <div class="trotter">
+                  <div class="userInfo">
+                    <h3>{{item.title}}</h3>
+                    <div>
+                      <div class="correctTrotterBlock">
+                        <ul>
+                          <li>
+                            <img src="../../../../assets/editTrotterIcon.svg" alt="edit trotter">
+                            <p class="editCurrentTweet">Edit</p>
+                          </li>
+                          <li>
+                            <img src="../../../../assets/deleteTrotterIcon.svg" alt="delete trotter">
+                            <p class="deleteCurrentTweet">Delete</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
 
+                  </div>
+                  <p class=trotterText><span>{{item.body}}</span></p>
+                </div>
+                <div class="inclosureAndInput">
+                  <div class="inclosure">
+                    <img src="../../../../assets/inclosureImg.svg" alt="img">
+                    <img src="../../../../assets/inclosureGif.svg" alt="git">
+                    <img src="../../../../assets/inclosureSmile.svg" alt="smile">
+                    <img src="../../../../assets/inclosureLocation.svg" alt="location">
+                  </div>
+
+                </div>
+              </div>
+          </div>
         <h3 class="moreTrotter">See more</h3>
       </article>
     </section>
@@ -50,4 +86,3 @@
     </footer>
   </div>
 </section>
-<button (click)="addNew.emit();console()">aaaaaaaaaaaaaaaaaaa{{ posts }}</button>

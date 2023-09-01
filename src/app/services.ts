@@ -7,6 +7,6 @@ export class HttpService{
   constructor(private http: HttpClient){ }
 
   getData(){
-    return this.http.get('assets/user.json')
+    return this.http.get('https://jsonplaceholder.typicode.com/posts')
   }
 }
