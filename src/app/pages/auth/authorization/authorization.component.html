@@ -15,7 +15,7 @@
       <input formControlName="password" placeholder="введите ваш пароль" id="passwordInReg" type="password">
       <label for="repeatPass">Подтверждение пароля</label>
       <input formControlName="rePassword" placeholder="введите ваш пароль повторно" id="repeatPass" type="password">
-      <button class="registrationButton" type="submit" [disabled]="auth.valid" [class.disable]="auth.valid" >
+      <button class="registrationButton" type="submit" [class.disable]="!validForm">
         Зарегистрироваться
       </button>
     </form>

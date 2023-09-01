@@ -11,6 +11,7 @@ import * as _ from 'lodash';
 import {CurrentPostService} from "../../../services/currentPost.service";
 import {Store} from "@ngrx/store";
 import {add} from "../../../store/actions";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-main',
@@ -24,16 +25,25 @@ export class MainComponent implements OnChanges{
 
   updatePosts: Posts[] = [];
 
-  constructor(private PS: CurrentPostService, private store: Store) {
+  auth = false
+
+  constructor(private PS: CurrentPostService, private store: Store, private router: Router) {
   }
 
   ngOnChanges() {
     this.updatePosts = _.cloneDeep(this.posts);
+    this.auth = Boolean(localStorage.getItem('auth'));
   }
 
   getPostById(id:number):void {
     const post: Posts = this.updatePosts.filter((elem) => elem.id === id)[0]
     this.PS.setPost(post)
     this.store.dispatch(add({post:post}))
+  }
+
+  getOut () {
+    localStorage.setItem('auth', 'false')
+    this.auth = false;
+    this.router.navigate(['/login'])
   }
 }

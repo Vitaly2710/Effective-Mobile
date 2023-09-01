@@ -7,7 +7,7 @@ export enum PostStore {
 }
 
 export interface State {
-  posts: Posts
+  posts: Posts;
 }
 
 export const initialState:State = {

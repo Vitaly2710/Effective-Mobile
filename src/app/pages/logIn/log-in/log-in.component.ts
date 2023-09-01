@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-log-in',
@@ -8,10 +9,21 @@ import {FormControl, FormGroup} from "@angular/forms";
 })
 export class LogInComponent {
 
-  myForm : FormGroup = new FormGroup({
-
-    "userName": new FormControl(),
+  logIn : FormGroup = new FormGroup({
     "userEmail": new FormControl(),
-    "userPhone": new FormControl()
+    "password": new FormControl()
   });
+
+  constructor(private router: Router) {
+  }
+
+  onSubmit() {
+    if(localStorage.getItem(this.logIn.value['userEmail']) === this.logIn.value['password'] && localStorage.getItem(this.logIn.value['userEmail'])) {
+      localStorage.setItem('auth','true');
+      this.router.navigate(['/'])
+    } else {
+      alert('Неверный логин или пароль')
+    }
+  }
+
 }

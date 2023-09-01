@@ -5,20 +5,15 @@
         <img src="../../../../assets/LogoINLoginPage.svg" alt="undefined">
       </div>
       <h2 class="headingInLogin">Вход</h2>
-      <form class="formInLoginPage">
-        <div>
+      <form class="formInLoginPage" [formGroup]="logIn" (ngSubmit)="onSubmit()">
           <label for="myLogin">Логин</label>
-          <input placeholder="введите ваш логин" id="myLogin">
-        </div>
-        <div>
+          <input placeholder="введите ваш логин" id="myLogin" formControlName="userEmail">
           <label for="password">Пароль</label>
-          <input placeholder="введите ваш пароль" id="password" type="password">
-        </div>
-        <button class="buttonLOgIn" type="submit">
+          <input placeholder="введите ваш пароль" id="password"  formControlName="password">
+        <button class="buttonLOgIn" type="submit" >
           Войти
         </button>
       </form>
-
       <a class="redirectToRegistration" routerLink="/auth">Зарегистрироваться</a>
     </section>
     <div class="wrapperloginBackground">

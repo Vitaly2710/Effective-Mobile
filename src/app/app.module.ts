@@ -16,6 +16,7 @@ import {TwittComponent} from "./pages/main/twitt/twitt.component";
 import {RouterModule, Routes} from "@angular/router";
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import {environment} from "../environments/environment";
+import {MatIconModule} from '@angular/material/icon';
 
 const appRoutes: Routes =[
   { path: '', component: MainComponentContainer},
@@ -43,7 +44,8 @@ const appRoutes: Routes =[
     StoreDevtoolsModule.instrument({
       name: 'NgRx Demo App',
       logOnly: environment.production
-    })
+    }),
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

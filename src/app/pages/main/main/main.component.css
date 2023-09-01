@@ -153,6 +153,7 @@ header {
 .photoInput {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .photoInput img {
@@ -341,4 +342,20 @@ footer {
 
 .container .inclosureAndInput .inclosure {
   width: 50%;
+}
+
+.authorise img{
+  width: 30%;
+  margin: 1rem;
+}
+
+.authorise p {
+  max-width: 3rem;
+  font-family:'Montserrat', Bold, sans-serif;
+  font-weight: 600;
+}
+
+.authorise div {
+  cursor: pointer;
+  font-family:'Montserrat', Bold, sans-serif;
 }

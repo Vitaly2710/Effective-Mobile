@@ -5,10 +5,15 @@
         <img src="../../../../assets/LogoInHeader.svg" alt="logo undefined"/>
         <h2 class="trotterInHeader">Trotter</h2>
       </div>
-      <div class="wrapperForHeaderButton">
+      <div class="wrapperForHeaderButton" *ngIf="!auth">
         <button class="logInButton" routerLink="/login">
         Log in
         </button>
+      </div>
+      <div *ngIf="auth" class="photoInput authorise">
+        <img src="../../../../assets/UserFoto.svg"/>
+        <p>User Name</p>
+        <div (click)="getOut()">Out</div>
       </div>
     </header>
     <section class="mainBlock">
