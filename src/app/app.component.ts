@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {Observable} from "rxjs";
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-root',

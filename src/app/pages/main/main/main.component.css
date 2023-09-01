@@ -29,7 +29,6 @@ header {
   max-width: 1512px;
   margin: 0 auto;
   background: #FFFFFF;
-  height: 100vh;
 }
 
 .logoBlockInHeader {
@@ -73,11 +72,10 @@ header {
 .mainBlock {
   display: flex;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
-  height: 100%;
+  height: 80%;
 }
 
 .mainBlockTrotteList {
-  width: 75%;
   overflow: auto;
 }
 
@@ -111,9 +109,17 @@ header {
 
 }
 
-.mainBlockTrotteListTrotter .userInfo {
+
+.container {
+  width: 62%;
+  margin: 1.5% auto 3%;
+
+}
+
+.userInfo {
   display: flex;
   position: relative;
+  justify-content: space-between;
 }
 
 .mainBlockTrotteListTrotter .userInfo h3 {
@@ -168,7 +174,7 @@ header {
 
 .buttonWhichAddNewTweetInList {
   border-radius: 30px;
-  padding: 1% 3.7% 1% 3.7%;
+  padding: 1% 3.7% 1% 2.7%;
   background-color: #38A6FF;
   color:#FFFFFF;
   border: none;
@@ -282,4 +288,57 @@ footer {
   font-family: 'Montserrat', Regular, sans-serif;
   font-size: 1.8rem;
   font-weight: normal;
+}
+
+.wrapperUserPhoto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wrapperUserPhoto img {
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.trotter {
+  position: relative;
+  margin: 0.7rem 1rem 0.7rem 1rem;
+}
+
+.trotter .trotterText {
+  margin-top: 1%;
+  font-family: var(--coomon-text-style);
+  font-weight: normal;
+  font-size: 1.8rem;
+  line-height: 22px;
+  width: 95%;
+}
+
+.trotter .response {
+  margin-top: 4%;
+}
+
+.container {
+  display: flex;
+  position: relative;
+}
+
+.correctTrotterBlock {
+  position: absolute;
+}
+
+.correctTrotterBlock li {
+  list-style-type: none;
+}
+
+.container .inclosureAndInput {
+  position: absolute;
+  width: 45%;
+  bottom: -35%;
+  left: 6%
+}
+
+.container .inclosureAndInput .inclosure {
+  width: 50%;
 }

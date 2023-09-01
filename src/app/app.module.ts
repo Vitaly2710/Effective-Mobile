@@ -6,18 +6,27 @@ import { AuthorizationComponent } from './pages/auth/authorization/authorization
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { LogInComponent } from './pages/logIn/log-in/log-in.component';
 import { MainComponent } from './pages/main/main/main.component';
+import {StoreModule} from "@ngrx/store";
+import {counterReducer} from "./store/reducers";
+import {MainComponentContainer} from "./pages/main/main/main.container";
+import {MainModule} from "./pages/main/main/main.module";
+import {HttpClientModule} from "@angular/common/http";
+import {CommonModule} from "@angular/common";
 
 @NgModule({
   declarations: [
     AppComponent,
     LogInComponent,
     AuthorizationComponent,
-    MainComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    StoreModule.forRoot({count: counterReducer}),
+    MainModule,
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
