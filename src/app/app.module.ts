@@ -12,12 +12,22 @@ import {MainComponentContainer} from "./pages/main/main/main.container";
 import {MainModule} from "./pages/main/main/main.module";
 import {HttpClientModule} from "@angular/common/http";
 import {CommonModule} from "@angular/common";
+import {TwittComponent} from "./pages/main/twitt/twitt.component";
+import {RouterModule, Routes} from "@angular/router";
+
+const appRoutes: Routes =[
+  { path: '', component: MainComponentContainer},
+  { path: 'twitt', component: TwittComponent},
+  { path: 'login', component: LogInComponent },
+  { path: 'auth', component: AuthorizationComponent }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     LogInComponent,
     AuthorizationComponent,
+    TwittComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +36,8 @@ import {CommonModule} from "@angular/common";
     StoreModule.forRoot({count: counterReducer}),
     MainModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

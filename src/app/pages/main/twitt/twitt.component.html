@@ -1,0 +1,93 @@
+<section class="trotterPage">
+  <div class="trotterContainer">
+    <header>
+      <div class="logoBlockInHeader">
+        <img src="../../../../assets/LogoInHeader.svg" alt="logo undefined"/>
+        <h2 class="trotterInHeader">Trotter</h2>
+      </div>
+      <div class="wrapperForHeaderButton">
+        <button class="logInButton" routerLink="/login">
+          Log in
+        </button>
+      </div>
+    </header>
+    <section class="mainBlock">
+      <article class="mainBlockTrotteList">
+        <div class="backInMain" routerLink="/">
+          <a>
+            <img src="../../../../assets/backButton.svg">
+          </a>
+          <h2>Back</h2>
+        </div>
+        <div class="mainBlockTrotteListTrotter" id="mainblocktoAddTrot">
+        </div>
+        <div class="mainBlockTrotteListWrapper">
+          <div class="mainBlockTrotteListContainer">
+            <form class="addComment">
+              <img src="./assets/UserFoto.svg"/>
+              <input placeholder="Neigh your reply" maxlength="280" class="valueToAddInComment"/>
+              <button class="buttonWhichAddNewTweetInList" type="submit">Neigh</button>
+            </form>
+            <div class="inclosureAndInput">
+              <div class="inclosure">
+                <img src="../../../../assets/inclosureImg.svg" alt="img">
+                <img src="../../../../assets/inclosureGif.svg" alt="git">
+                <img src="../../../../assets/inclosureSmile.svg" alt="smile">
+                <img src="../../../../assets/inclosureLocation.svg" alt="location">
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="container" *ngIf="twitt">
+        <div class="wrapperUserPhoto">
+          <img src="../../../../assets/UserFoto.svg" alt="user photo">
+        </div>
+        <div class="trotter">
+          <div class="userInfo">
+            <h3></h3>
+            <div>
+              <div class="correctTrotterBlock">
+                <ul>
+                  <li>
+                    <img src="../../../../assets/editTrotterIcon.svg" alt="edit trotter">
+                    <p class="editCurrentTweet">Edit</p>
+                  </li>
+                  <li>
+                    <img src="../../../../assets/deleteTrotterIcon.svg" alt="delete trotter">
+                    <p class="deleteCurrentTweet">Delete</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <h2>{{twitt.title}}</h2>
+          <p class=trotterText><span>{{twitt.body}}</span></p>
+        </div>
+        <div class="inclosureAndInput">
+          <div class="inclosure">
+            <img src="../../../../assets/inclosureImg.svg" alt="img">
+            <img src="../../../../assets/inclosureGif.svg" alt="git">
+            <img src="../../../../assets/inclosureSmile.svg" alt="smile">
+            <img src="../../../../assets/inclosureLocation.svg" alt="location">
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+    <footer>
+      <div class="logoInFooter">
+        <img src="../../../../assets/LogoInFooter.svg">
+        <h2>trotter</h2>
+      </div>
+      <div class="howAndWhen">
+        <p>VITALY CHYSTSYAKOV</p>
+        <p>edited 01.09.2023</p>
+      </div>
+      <h3 class="mailInFooter">chystsyakov3@gmail.com</h3>
+    </footer>
+  </div>
+</section>

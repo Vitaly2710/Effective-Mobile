@@ -1,13 +1,13 @@
 <section class="mainPage">
   <div class="mainPageContainer">
     <header>
-      <div class="logoBlockInHeader">
+      <div class="logoBlockInHeader" routerLink="''">
         <img src="../../../../assets/LogoInHeader.svg" alt="logo undefined"/>
         <h2 class="trotterInHeader">Trotter</h2>
       </div>
       <div class="wrapperForHeaderButton">
-        <button class="logInButton">
-          Log in
+        <button class="logInButton" routerLink="/login">
+        Log in
         </button>
       </div>
     </header>
@@ -34,7 +34,7 @@
         </div>
         <div id="trotterList"></div>
           <div *ngFor="let item of updatePosts">
-              <div class="container" id="{{item.id}}">
+              <div class="container" id="{{item.id}}" (click)="getPostById(item.id)">
                 <div class="wrapperUserPhoto">
                   <img src="../../../../assets/UserFoto.svg" alt="user photo">
                 </div>
