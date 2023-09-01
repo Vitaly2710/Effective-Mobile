@@ -4,6 +4,7 @@ import {Store} from "@ngrx/store";
 import {Observable, take, takeWhile} from "rxjs";
 import {Posts} from "../../../store/interfaces";
 import {HttpService} from "../../../services";
+import {CurrentPostService} from "../../../services/currentPost.service";
 
 @Component({
   selector: 'app-main-container',
@@ -14,7 +15,7 @@ import {HttpService} from "../../../services";
     >
 		</app-main>
 	`,
-  providers: [HttpService]
+  providers: [HttpService, CurrentPostService]
 })
 export class MainComponentContainer {
   @Output() upPost: EventEmitter<Posts> = new EventEmitter()

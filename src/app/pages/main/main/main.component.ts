@@ -1,18 +1,16 @@
 import {
-  ChangeDetectorRef,
   Component,
   EventEmitter,
   Input,
   OnChanges,
   OnInit,
   Output,
-  SimpleChanges
 } from '@angular/core';
 import {Posts} from "../../../store/interfaces";
-import {ChangeDetection} from "@angular/cli/lib/config/workspace-schema";
 import * as _ from 'lodash';
-import {ActivatedRoute, Router} from "@angular/router";
-import {Subscription} from "rxjs";
+import {CurrentPostService} from "../../../services/currentPost.service";
+import {Store} from "@ngrx/store";
+import {add} from "../../../store/actions";
 
 @Component({
   selector: 'app-main',
@@ -25,7 +23,8 @@ export class MainComponent implements OnChanges{
   @Output() currentPost:EventEmitter<Posts> = new EventEmitter()
 
   updatePosts: Posts[] = [];
-  constructor(private activateRoute: ActivatedRoute) {
+
+  constructor(private PS: CurrentPostService, private store: Store) {
   }
 
   ngOnChanges() {
@@ -33,6 +32,8 @@ export class MainComponent implements OnChanges{
   }
 
   getPostById(id:number):void {
-    this.currentPost.emit(this.updatePosts.find((elem) => elem.id === id))
+    const post: Posts = this.updatePosts.filter((elem) => elem.id === id)[0]
+    this.PS.setPost(post)
+    this.store.dispatch(add({post:post}))
   }
 }

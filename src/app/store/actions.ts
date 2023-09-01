@@ -1,4 +1,5 @@
-import {createAction} from "@ngrx/store";
+import {createAction, props} from "@ngrx/store";
+import {Posts} from "./interfaces";
 
-export const add = createAction('Add posts');
+export const add = createAction('Add posts', props<{post: Posts}>());
 

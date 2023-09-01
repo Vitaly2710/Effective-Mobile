@@ -34,7 +34,7 @@
         </div>
         <div id="trotterList"></div>
           <div *ngFor="let item of updatePosts">
-              <div class="container" id="{{item.id}}" (click)="getPostById(item.id)">
+              <div class="container" id="{{item.id}}" (click)="getPostById(item.id)"  routerLink="/twitt/{{item.id}}">
                 <div class="wrapperUserPhoto">
                   <img src="../../../../assets/UserFoto.svg" alt="user photo">
                 </div>

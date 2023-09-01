@@ -1,16 +1,20 @@
 import { createReducer, on } from '@ngrx/store';
-import {Posts} from './interfaces';
 import {add} from "./actions";
+import {Posts} from "./interfaces";
+
+export enum PostStore {
+  Post = 'post',
+}
 
 export interface State {
-  posts: number
+  posts: Posts
 }
 
 export const initialState:State = {
-  posts: 0
+  posts: {id: 1, body: '', title:'', userId: 1}
 };
 
-export const counterReducer = createReducer(
+export const postReducer = createReducer(
   initialState,
-  on(add, state => ({...state, posts: state.posts + 1 }))
+  on(add, (state, post) => ({ posts: post.post}))
 );

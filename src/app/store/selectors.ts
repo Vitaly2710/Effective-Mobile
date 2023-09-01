@@ -1,10 +1,7 @@
 import {State} from "./reducers";
-import {createSelector} from "@ngrx/store";
+import {createFeatureSelector, createSelector} from "@ngrx/store";
 import {Posts} from "./interfaces";
 
-export const selectFeature = (state: State) => state.posts;
 
-export const selectFeatureCount = createSelector(
-  selectFeature,
-  (state) => state
-);
+export const state = createFeatureSelector<State>('count');
+export const data = createSelector(state, (state) => state.posts)
